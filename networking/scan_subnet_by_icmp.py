@@ -74,5 +74,7 @@ if __name__ == '__main__':
         result = ping(target=ip, timeout=1, count=1, verbose=False)
         result = str(result)
         if 'Reply' in result:
+            print(f'{ip} > success')
             ip_list.append(ip)
+        else: print(f'{ip} > fail')
     print(ip_list)
